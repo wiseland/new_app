@@ -1,4 +1,9 @@
 NewApp::Application.routes.draw do
+  # Users
+  get "users/new"
+  match 'signup',   :to => 'users#new'
+
+  # Pages
   root              :to => 'pages#home'
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
